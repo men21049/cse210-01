@@ -27,10 +27,6 @@ def check_movement(already_occupied, new_movement):
     return move
 
 
-git config - -global user.email "you@example.com"
-git config - -global user.name "Your Name"
-
-
 def save_valid_movement(movements_list, player):
 
     movements_list.append(player)
