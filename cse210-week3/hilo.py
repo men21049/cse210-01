@@ -1,4 +1,3 @@
-from operator import truediv
 from cards import cards
 from player import player
 
