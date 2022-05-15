@@ -1,3 +1,8 @@
+#########################################
+# The file instantiate the classes player and cards
+# to play hilo game, it has a main method to instantiate the instance of the class
+# and within it a while loop to keep playing while the player still wants to play.
+#########################################
 from cards import cards
 from player import player
 
@@ -6,44 +11,27 @@ def main():
 
     keep_playing = True
     playr = player()
-    name_player = input("What is your name? :")
-    playr.name = name_player
+    playr.name = input("What is your name? :")
 
     while keep_playing:
 
         card = cards()
         card1 = card.get_random_card()
+
         print(f'OK {playr.name}, let´s play')
         print(f'The card is: {card1} ')
+
         answer = input("Higher or lower? [h/l] ")
         card2 = card.get_random_card()
-        print(f'Next card was: {card2}')
-        compare = compare_cards(card1, card2)
 
-        if answer == compare:
-            playr.increase_score(100)
-        else:
-            playr.decrease_score(75)
+        print(f'Next card was: {card2}')
+        compare = card.compare_cards(card1, card2)
+
+        playr.inc_or_dec(answer, compare)
 
         print(f'Your score is: {playr.score}')
 
-        if playr.score <= 0:
-            print("GAME OVER")
-            keep_playing = False
-
-        kp = input("Play again? [y/n] ")
-
-        if kp == "n":
-            keep_playing = False
-
-
-def compare_cards(card1, card2):
-    result = ""
-    if card1 > card2:
-        result = "l"
-    else:
-        result = "h"
-    return result
+        keep_playing = playr.keep_playing()
 
 
 if __name__ == "__main__":
