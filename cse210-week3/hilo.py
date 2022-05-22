@@ -1,7 +1,14 @@
 #########################################
+#!/usr/bin/env python
 # The file instantiate the classes player and cards
 # to play hilo game, it has a main method to instantiate the instance of the class
 # and within it a while loop to keep playing while the player still wants to play.
+__author__ = "Juan Carlos Mena Osorio"
+__credits__ = ["Professor Vaughn Poulson, BYU-I"]
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Juan Carlos Mena Osorio"
+__status__ = "Development"
 #########################################
 from cards import cards
 from player import player

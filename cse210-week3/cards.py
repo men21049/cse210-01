@@ -1,9 +1,16 @@
-#########################################
+#!/usr/bin/env python
+# #########################################
 # Class cards, it has 3 methods:
 # __init__ : constructore class to instantiate cards
 # get_random_card: it return a random numbre from the array[1 .. to .. 13]
 # compare_cards : it compares the values of 2 already draw cards and returns
 #                 "l" for lower and "h" for higher
+__author__ = "Juan Carlos Mena Osorio"
+__credits__ = ["Professor Vaughn Poulson, BYU-I"]
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Juan Carlos Mena Osorio"
+__status__ = "Development"
 #########################################
 import random
 

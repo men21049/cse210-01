@@ -1,4 +1,5 @@
-#########################################
+#!/usr/bin/env python
+# #########################################
 # Class player defines a player in the game,
 # it has 4 methods:
 # __init__ : initializes the class with an empty
@@ -9,7 +10,15 @@
 # increment or decrease base on a comparisson of the players answers
 # keep_playing: determines whether a player wants to exit out of
 # the fame or keep playing after every play or if the score is less than 0
+__author__ = "Juan Carlos Mena Osorio"
+__credits__ = ["Professor Vaughn Poulson, BYU-I"]
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Juan Carlos Mena Osorio"
+__status__ = "Development"
 #########################################
+
+
 class player:
 
     def __init__(self):
