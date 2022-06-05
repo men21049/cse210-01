@@ -10,19 +10,21 @@ __version__ = "1.0.1"
 __maintainer__ = "Juan Carlos Mena Osorio"
 __status__ = "Development"
 #########################################
-from cards import cards
-from player import player
+from cards import Cards
+from player import Player
 
 
 def main():
+    """Main method to start game
+    """
 
     keep_playing = True
-    playr = player()
+    playr = Player()
     playr.name = input("What is your name? :")
 
     while keep_playing:
 
-        card = cards()
+        card = Cards()
         card1 = card.get_random_card()
 
         print(f'OK {playr.name}, let´s play')
@@ -42,4 +44,6 @@ def main():
 
 
 if __name__ == "__main__":
+    """Call main method to start game
+    """
     main()

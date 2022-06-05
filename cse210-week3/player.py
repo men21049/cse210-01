@@ -19,25 +19,50 @@ __status__ = "Development"
 #########################################
 
 
-class player:
+class Player:
+    """Player class creates a player in the game hilo.
+    """
 
     def __init__(self):
+        """This method instantiate the Player class and assigns a min score of 300
+        """
         self.name = ""
         self.score = 300
 
     def increase_score(self, inc):
+        """Method to increase score
+
+        Args:
+            inc (_int_): the amount to increase the score for
+        """
         self.score += inc
 
     def decrease_score(self, dec):
+        """Method to decrease score
+
+        Args:
+            dec (_int_): the amount to decrease the score for
+        """
         self.score -= dec
 
     def inc_or_dec(self, answer, compare):
+        """This method compares 2 variables and determines whether score must increase or decrease
+
+        Args:
+            answer (_string_): player's answer whether a card is L(lower) or h(higher) than a previous card
+            compare (_string_): comparisson betwen the two cards l for lower h for higher
+        """
         if answer == compare:
             self.increase_score(100)
         else:
             self.decrease_score(75)
 
     def keep_playing(self):
+        """This method prompt the user whether they want to keep play or not
+
+        Returns:
+            keep_playing_boolean_: variable to store whether player wants to keep playing or not
+        """
         keep_playing = True
 
         if self.score <= 0:
